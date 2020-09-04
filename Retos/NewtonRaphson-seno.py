@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Aug 27 16:05:52 2020
 
-@author: Julian
-"""
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -19,11 +15,12 @@ def newtonRaphson( x ):
     i = 0
     while abs(h) >= 1.e-15: #funciona hasta 1.e-15 
         h = func(x)/derivFunc(x) 
-        x = x - h 
+        x = x - h
+        
         i += 1
-    print("El valor de la raiz es: ",x,"iteraciones",i) 
+    print("El valor de la raiz es: ",x,"\n iteraciones: ",i) 
 
-x0 = 1  #no admite números muy cercanos a 0, como 0.001
+x0 = 1.5  #no admite números muy cercanos a 0, como 0.001
 newtonRaphson(x0) 
   
 
